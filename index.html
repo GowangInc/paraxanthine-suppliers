@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Public-source paraxanthine supplier offers, document claims and restrictions, with verification limits kept visible.">
+  <meta name="referrer" content="no-referrer">
+  <title>Paraxanthine Supplier Reference</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#suppliers">Skip to suppliers</a>
+  <header>
+    <div class="heading-row"><h1>🧪 Paraxanthine Supplier Reference</h1><span class="draft-label">Local review draft</span></div>
+    <p class="subtitle">China-based raw-material supplier research. Public sources only; no personal transaction history.</p>
+    <p class="identity">1,7-Dimethylxanthine <span>CAS 611-59-6</span> <span>C₇H₈N₄O₂ · 180.16 g/mol</span></p>
+    <p class="scope">Supplier specifications and certificates are attributed claims. None establishes a supplied batch's identity, safety or authorization for human consumption. No dosing or consumption guidance is included.</p>
+  </header>
+  <main>
+    <div class="stats-bar" id="stats" aria-label="Dataset summary"></div>
+    <form class="controls" role="search" onsubmit="return false">
+      <div class="search-control"><label for="search">Search suppliers</label><input id="search" type="search" placeholder="Company, city, purity, document…" autocomplete="off"></div>
+      <div><label for="evidence">Source</label><select id="evidence"><option value="all">All public sources</option><option value="official">Supplier website</option><option value="marketplace">Marketplace listing</option></select></div>
+      <div><label for="restriction">Restriction</label><select id="restriction"><option value="all">All restrictions</option><option value="research">Research / non-consumption</option><option value="business">Qualified businesses</option><option value="unknown">Eligibility not established</option></select></div>
+      <label class="checkbox-control"><input type="checkbox" id="documents"> Example COA / results</label>
+      <button type="reset" id="reset">Reset filters</button>
+      <button type="button" id="export">Export reference</button>
+    </form>
+    <div class="table-meta"><p id="count" role="status" aria-live="polite"></p><p>Source record: <time datetime="2026-10-15">15 October 2026</time></p></div>
+    <div class="mobile-sort"><label for="sort-mobile">Sort suppliers</label><select id="sort-mobile"><option value="company">Supplier A–Z</option><option value="location">Location A–Z</option><option value="documentation">Documentation A–Z</option></select></div>
+    <section id="suppliers" tabindex="-1" aria-label="Supplier reference">
+      <table>
+        <caption class="visually-hidden">Public paraxanthine supplier claims. Use column buttons to sort; results are not independent batch verification.</caption>
+        <thead><tr>
+          <th scope="col" aria-sort="ascending"><button class="sort" data-sort="company">Supplier <span aria-hidden="true">↑</span></button></th>
+          <th scope="col"><button class="sort" data-sort="purity">Specification <span aria-hidden="true">↕</span></button></th>
+          <th scope="col"><button class="sort" data-sort="moq">MOQ / packaging <span aria-hidden="true">↕</span></button></th>
+          <th scope="col"><button class="sort" data-sort="documentation">Documentation <span aria-hidden="true">↕</span></button></th>
+          <th scope="col"><button class="sort" data-sort="restriction">Restrictions / limits <span aria-hidden="true">↕</span></button></th>
+          <th scope="col">Source</th>
+        </tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+      <p class="empty" id="empty" hidden>No suppliers match these filters. Try a broader search or reset the filters.</p>
+    </section>
+    <section class="evidence-key" aria-labelledby="key-title">
+      <h2 id="key-title">How to read this reference</h2>
+      <dl>
+        <div><dt>Supplier marketing</dt><dd>Product descriptions, certifications, grade and sampling claims come from supplier websites or listings. They are not independently validated.</dd></div>
+        <div><dt>COA / example results</dt><dd>A public example certificate is a document claim, not a retest or evidence that a delivered batch matches. Purity and assay are different measures; neither alone establishes contaminant control.</dd></div>
+        <div><dt>Research restriction</dt><dd>Stated research or non-consumption restrictions remain visible even when other marketing mentions supplements. Samples do not establish an individual retail offer.</dd></div>
+        <div><dt>Verified outcomes</dt><dd>No independent laboratory, shipment, delivery or human-use outcomes are established by this dataset. Supplier claims are not endorsements or purchasing recommendations.</dd></div>
+      </dl>
+    </section>
+  </main>
+  <footer><p>Public-source reference · no private correspondence or order records.</p><p>Layout follows the <a href="https://gowanginc.github.io/retatrutide-suppliers/" target="_blank" rel="noopener noreferrer">retatrutide reference</a>.</p></footer>
+  <noscript><p class="noscript">JavaScript is needed to display and filter the supplier reference. The public-source dataset is available in data.js alongside this page.</p></noscript>
+</body>
+</html>
