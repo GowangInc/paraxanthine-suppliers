@@ -2,6 +2,7 @@
 (() => {
   const reta = document.body.dataset.compound === 'retatrutide';
   const suppliers = reta ? globalThis.RETATRUTIDE_DATA : globalThis.PARAXANTHINE_DATA.suppliers;
+  const correspondenceMarkers = {cima:'★★', prius:'★', youyou:'★', kintai:'★', jianfeng:'★'};
   const byId = id => document.getElementById(id);
   const node = (tag, text, className) => {
     const element = document.createElement(tag);
@@ -117,7 +118,7 @@
     const provenance = reta ? (supplier.source === 'janoshik' ? 'Janoshik registry' : supplier.source === 'discovery' ? 'Supplier discovery' : 'Research record') : (supplier.source_type === 'marketplace' ? 'Marketplace listing' : 'Supplier website');
     top.append(node('span', `NO. ${String(index + 1).padStart(2, '0')}`, 'record-number'), node('span', provenance, 'record-source'));
     const heading = node('h3', supplier.company || supplier.domain);
-    const correspondence = !reta && ({cima:'★★', prius:'★', youyou:'★', kintai:'★', jianfeng:'★'})[supplier.id];
+    const correspondence = !reta && correspondenceMarkers[supplier.id];
     if (correspondence) {
       const marker = node('span', ` ${correspondence}`);
       marker.setAttribute('role', 'img');
@@ -153,6 +154,11 @@
     } else {
       pair(facts, 'Specification · supplier claim', supplier.purity);
       pair(facts, 'MOQ / packaging', supplier.moq);
+      const quote = supplier.email_quote;
+      const quotedPrice = node('div', undefined, 'email-quote');
+      const priceText = quote ? `${quote.offers.map(offer => `${offer.quantity} — ${offer.price}`).join('\n')}\n${quote.terms}` : supplier.email_quote_status || 'No verified email price recorded.';
+      quotedPrice.append(node('dt', quote ? `Email quote · ${quote.date} (China time)` : 'Email quote'), node('dd', priceText));
+      facts.append(quotedPrice);
     }
     card.append(facts);
     if (reta) {
@@ -221,6 +227,7 @@
     const sort = byId('sort').value;
     const filtered = suppliers.filter(matches);
     if (sort !== 'original') filtered.sort((a,b) => {
+      if (sort === 'correspondence') return (correspondenceMarkers[b.id] || '').length - (correspondenceMarkers[a.id] || '').length || a.company.localeCompare(b.company, 'en');
       if (sort === 'tests') return (b.test_count || 0) - (a.test_count || 0);
       if (sort === 'china') return Number(Boolean(b.china_based)) - Number(Boolean(a.china_based));
       const key = sort === 'company' && reta ? 'domain' : sort;
@@ -250,7 +257,7 @@
   byId('sortDirection').addEventListener('click', () => { reverseSort = !reverseSort; updateSortDirection(); render(); });
   function resetFilters() {
     HTMLFormElement.prototype.reset.call(byId('filters'));
-    byId('sort').value = reta ? 'original' : 'company';
+    byId('sort').value = reta ? 'original' : 'correspondence';
     reverseSort = false;
     updateSortDirection();
     render();

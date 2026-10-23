@@ -115,6 +115,8 @@ input[type='checkbox'] { width: 14px; height: 14px; accent-color: var(--accent);
 dt { color: var(--muted); font-size: 9px; letter-spacing: .8px; text-transform: uppercase; margin-bottom: 6px; }
 dd { margin: 0; font-size: 12px; line-height: 1.65; overflow-wrap: anywhere; }
 .record-facts dd { font-weight: 500; }
+.record-facts .email-quote { grid-column: 1/-1; }
+.email-quote dd { white-space: pre-line; }
 .record-warning { display: flex; gap: 8px; align-items: flex-start; color: var(--warning); font-size: 11px; padding: 10px 0 12px; }
 .record-warning svg { margin-top: 2px; }
 .restriction { border-left: 2px solid var(--line); padding-left: 10px; font-size: 11px; color: var(--muted); margin: 4px 0 17px; }

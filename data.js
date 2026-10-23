@@ -1,7 +1,8 @@
-/* Public-source record supplied on 2026-10-15. No private quotes or order history. */
+/* Public-source specifications dated 2026-10-15, with approved historical email quote summaries. */
 globalThis.PARAXANTHINE_DATA = {
-  updated: '2026-10-15',
-  scope: 'China-based raw-material supplier research; public-source facts only. No personal transaction history.',
+  updated: '2026-10-23',
+  scope: 'China-based raw-material supplier research; public-source specifications and dated historical email quote summaries.',
+  email_quote_context: 'Historical email quotes, with dates in China time; not guaranteed current offers. Quoted quantities do not establish MOQ. No explicit MOQ or quote expiry was stated in the reviewed messages.',
   identity: {name: 'Paraxanthine', synonym: '1,7-Dimethylxanthine', cas: '611-59-6', formula: 'C7H8N4O2', molar_mass_g_mol: 180.16},
   independent_batch_tests: 0,
   limitations: [
@@ -46,6 +47,7 @@ globalThis.PARAXANTHINE_DATA = {
     },
     {
       id: 'jianfeng', company: 'Jinan Jianfeng Chemical Co., Ltd.', location: 'Jinan, Shandong, China', source_type: 'official',
+      email_quote_status: 'Can supply; quote pending (no price given).',
       purity: '≥98% HPLC.',
       grade: 'Research / formulation positioning; exercise and cosmetics research described on the product page.',
       moq: '10 g. 1 / 5 / 25 kg packaging; samples and custom packing advertised.',
@@ -57,6 +59,7 @@ globalThis.PARAXANTHINE_DATA = {
     },
     {
       id: 'kintai', company: 'Kintai / Kintainutri', location: 'China; exact legal supplying entity to be confirmed', source_type: 'official',
+      email_quote: {date: '2026-10-16', offers: [{quantity: '30 g sample', price: '$54 (currency unconfirmed)'}], terms: 'Shipping waived. Currency code and tax unspecified.'},
       purity: '97–99%, HPLC; synthetic origin.',
       grade: 'Marketed as a dietary / healthcare supplement ingredient. Certification claims are not independently validated.',
       moq: 'Normal MOQ 1 kg. Gram-scale / free samples advertised.',
@@ -79,6 +82,7 @@ globalThis.PARAXANTHINE_DATA = {
     },
     {
       id: 'youyou', company: 'Youyou Biotechnology Co., Ltd.', location: 'Suzhou, Jiangsu, China', source_type: 'official',
+      email_quote: {date: '2026-10-17', offers: [{quantity: '30 g', price: 'RMB 245'}, {quantity: '100 g', price: 'RMB 450'}], terms: 'Shipping included for both. Tax unspecified.'},
       purity: 'Purity and assay both ≥99.0% HPLC.',
       grade: 'PRAXPULSE™ branded ingredient. ISO9001 / FSSC22000 / HALAL / KOSHER and SELF-GRAS claimed.',
       moq: 'Flexible MOQ, laboratory quantities and samples advertised. No fixed minimum.',
@@ -90,6 +94,7 @@ globalThis.PARAXANTHINE_DATA = {
     },
     {
       id: 'prius', company: "Xi'an Prius Biological Engineering Co., Ltd.", location: "Xi'an, Shaanxi, China", source_type: 'official',
+      email_quote: {date: '2026-10-19', offers: [{quantity: '30 g', price: 'CNY 200 total'}], terms: 'Tax and domestic shipping included.'},
       purity: 'Headline ≥99%; example table reports 97.1% HPLC against a ≥95.0% specification.',
       grade: 'Health-care raw material; OEM / ODM and custom supplement marketing.',
       moq: 'Free samples advertised; fixed minimum unstated.',
@@ -101,6 +106,7 @@ globalThis.PARAXANTHINE_DATA = {
     },
     {
       id: 'cima', company: 'Wuxi Cima Science Co., Ltd.', location: 'Wuxi, Jiangsu, China', source_type: 'official',
+      email_quote: {date: '2026-10-14', offers: [{quantity: '30 g', price: 'RMB 200 total'}], terms: 'Shipping included. Tax unspecified.'},
       purity: 'Headline 99% minimum; body states a standard specification of 98% minimum.',
       grade: 'All products restricted to laboratory / research use; human and animal use prohibited.',
       moq: 'Sample / custom services advertised. Standard 25 kg/drum; fixed minimum unstated.',
