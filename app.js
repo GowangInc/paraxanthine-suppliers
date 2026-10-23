@@ -116,7 +116,15 @@
     const top = node('div', undefined, 'record-top');
     const provenance = reta ? (supplier.source === 'janoshik' ? 'Janoshik registry' : supplier.source === 'discovery' ? 'Supplier discovery' : 'Research record') : (supplier.source_type === 'marketplace' ? 'Marketplace listing' : 'Supplier website');
     top.append(node('span', `NO. ${String(index + 1).padStart(2, '0')}`, 'record-number'), node('span', provenance, 'record-source'));
-    card.append(top, node('h3', supplier.company || supplier.domain));
+    const heading = node('h3', supplier.company || supplier.domain);
+    const correspondence = !reta && ({cima:'★★', prius:'★', youyou:'★', kintai:'★', jianfeng:'★'})[supplier.id];
+    if (correspondence) {
+      const marker = node('span', ` ${correspondence}`);
+      marker.setAttribute('role', 'img');
+      marker.setAttribute('aria-label', correspondence === '★★' ? 'Ordered from' : 'Positive email response');
+      heading.append(marker);
+    }
+    card.append(top, heading);
     const location = node('p', supplier.location || 'Location not recorded', `record-location${reta ? ' compact-text' : ''}`);
     location.title = supplier.location || '';
     card.append(location);

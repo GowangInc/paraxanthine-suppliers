@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="tokens.css?v=atlas-1">
   <link rel="stylesheet" href="styles.css?v=atlas-1">
   <script src="data.js?v=atlas-1" defer></script>
-  <script src="app.js?v=atlas-1" defer></script>
+  <script src="app.js?v=correspondence-1" defer></script>
 </head>
 <body data-compound="paraxanthine">
   <a class="skip-link" href="#directory">Skip to supplier directory</a>
@@ -29,6 +29,7 @@
     <section class="metrics" id="stats" aria-label="Dataset summary"></section>
     <section id="directory" aria-labelledby="directory-title" tabindex="-1">
       <div class="section-heading"><div class="heading-group"><span class="section-index">01 /</span><h2 id="directory-title">Supplier directory</h2></div><div class="view-toggle" role="group" aria-label="Directory layout"><button type="button" data-view-button="grid" aria-label="Grid view" aria-pressed="true" title="Grid view"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="2" y="2" width="4" height="4"/><rect x="10" y="2" width="4" height="4"/><rect x="2" y="10" width="4" height="4"/><rect x="10" y="10" width="4" height="4"/></svg></button><button type="button" data-view-button="list" aria-label="List view" aria-pressed="false" title="List view"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M2 3h12M2 8h12M2 13h12"/></svg></button></div></div>
+      <p class="scope" id="correspondence-legend">★ Positive email response · ★★ Ordered from. These markers record correspondence/order history, not quality or safety ratings.</p>
       <form class="filters" id="filters" role="search" onsubmit="return false">
         <label class="field search-field"><span class="field-label">Search the directory</span><span class="search-box"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="m10.5 10.5 3 3"/></svg><input id="search" type="search" placeholder="Company, location or documentation…" autocomplete="off"></span></label>
         <label class="field"><span class="field-label">Source</span><select id="evidence"><option value="all">All public sources</option><option value="official">Supplier website</option><option value="marketplace">Marketplace listing</option></select></label><label class="field"><span class="field-label">Restriction</span><select id="restriction"><option value="all">All restrictions</option><option value="research">Research / non-consumption</option><option value="business">Qualified businesses</option><option value="unknown">Eligibility not established</option></select></label>
@@ -40,7 +41,7 @@
       <div class="empty" id="empty" hidden><h3>No matching records.</h3><p>Try a broader search or clear your filters.</p><button id="emptyReset" type="button" class="button secondary">Reset filters</button></div>
     </section>
     <section class="methodology" id="methodology" aria-labelledby="method-title"><div class="methodology-header"><div class="heading-group"><span class="section-index">02 /</span><h2 id="method-title">Reading the sources</h2></div><span class="eyebrow">Context before conclusions</span></div><div class="method-grid"><div class="method-item"><span>01</span><div><h3>Supplier marketing</h3><p>Product descriptions, certifications, grade and sampling claims come from supplier websites or listings. They are not independently validated.</p></div></div><div class="method-item"><span>02</span><div><h3>COA / example results</h3><p>A public example certificate is a document claim, not a retest or evidence that a delivered batch matches. Purity and assay are different measures; neither alone establishes contaminant control.</p></div></div><div class="method-item"><span>03</span><div><h3>Research restrictions</h3><p>Stated research or non-consumption restrictions remain visible even when other marketing mentions supplements. Samples do not establish an individual retail offer.</p></div></div><div class="method-item"><span>04</span><div><h3>Verified outcomes</h3><p>No independent laboratory, shipment, delivery or human-use outcomes are established by this dataset. Supplier claims are not endorsements or purchasing recommendations.</p></div></div></div></section>
-    <footer class="footer"><p>Supplier Atlas <span aria-hidden="true">/</span> Paraxanthine reference</p><p>Public sources only · no personal transaction history. <a href="#directory">Back to directory ↑</a></p></footer>
+    <footer class="footer"><p>Supplier Atlas <span aria-hidden="true">/</span> Paraxanthine reference</p><p>Public-source specifications · correspondence/order markers as noted above. <a href="#directory">Back to directory ↑</a></p></footer>
     <noscript><p class="noscript">JavaScript is needed to display and filter this directory. The supplier dataset is available in data.js alongside this page.</p></noscript>
   </main>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
